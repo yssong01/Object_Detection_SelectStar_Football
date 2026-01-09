@@ -24,6 +24,9 @@ YOLOv8 기반 축구 경기 영상 내 객체 탐지 성능 최적화 분석 실
   - `R` (Referee): 심판
   - `O` (Others): 기타 객체
 
+- **✍️ 사용한 데이터양**: 전체 데이터의 10%
+- **✍️ 분할 비율** = Train : Val : Test = 7 : 1 : 2
+
 ### Local PC의 GPU 활용
 - VScode에서 Google Colab 실행
 - local PC의 장치 확인: cuda 설정 활용
