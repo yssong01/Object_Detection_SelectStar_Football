@@ -8,7 +8,7 @@ YOLOv8 기반 축구 경기 영상 내 객체 탐지 성능 최적화 분석 실
 
 ## 2. 실험 목적
 
-모델 크기(Yolov8n vs Yolov8s)와 이미지 해상도(640 vs 1280)의 변화가 축구 경기 내 소형 이미지 객체(공, 선수) 탐지 정확도(mAP50)에 미치는 인과관계를 비교하여 분석합니다.
+모델(Yolov8n vs Yolov8s) 변화와 이미지 해상도(640 vs 1280)의 변화가 축구 경기 내 소형 이미지 객체(공, 선수) 탐지 정확도(mAP50)에 미치는 인과관계를 비교하여 분석합니다.
 
 ## 3. 실험 환경
 
@@ -29,17 +29,20 @@ YOLOv8 기반 축구 경기 영상 내 객체 탐지 성능 최적화 분석 실
  -> GPU 모델: NVIDIA GeForce RTX 4070 Laptop GPU
 
 ### Models & Configurations (Epochs = 50)
-| Model | Resolution | Batch Size | Early Stopping |
+| Model | Resolution | mAP50 | Patience / Epochs |
 |-------|-----------|------------|----------------|
-| YOLOv8n | 640px | AutoBatch (-1) | patience=5 |
-| YOLOv8s | 640px | AutoBatch (-1) | patience=5 |
-| YOLOv8s | 1280px | AutoBatch (-1) | patience=5 |
+| YOLOv8n | 640px | ~0.463 | 10 / 50|
+| YOLOv8s | 640px | ~0.525 | 10 / 50|
+| YOLOv8s | 1280px | ~0.623 | 10 / 50|
+
+- 우선 640 해상도 이미지를 활용하여, YOLOv8s 모델이 더 적합함을 확인함.
+- 선택한 YOLOv8s 모델을 활용하여, 1280 해상도 이미지를 학습하여 mAP50 값이 더 개선되었음을 확인함. 
 
 ## 4. 실험 결과
 
-### 정량적 성능 분석
+### 🔎정량적 성능 분석
 
-🔎[Performance Analysis]
+[Performance Analysis]
 
 <img width="1400" height="800" alt="Step_Comparison_E50" src="https://github.com/user-attachments/assets/47b2741c-01c2-441e-a833-34c8ac55fe32" />
 
@@ -57,9 +60,9 @@ YOLOv8 기반 축구 경기 영상 내 객체 탐지 성능 최적화 분석 실
    - 고해상도 모델은 **10 Epoch 이내**에 목표 성능(0.5) 달성
 
 
-### 정성적 탐지 결과
+### 🔎정성적 탐지 결과
 
-🔎[Detection Results Comparison]
+[Detection Results Comparison]
 
 <img width="768" height="979" alt="Resolution_Comparison_Result" src="https://github.com/user-attachments/assets/5ee30734-b3f0-4f34-acbd-57a64d7469c4" />
 
