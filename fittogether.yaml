@@ -1,0 +1,10 @@
+names:
+- B
+- Ta
+- Tb
+- R
+- O
+nc: 5
+test: C:\yssong\SelectStar\test\images
+train: C:\yssong\SelectStar\train\images
+val: C:\yssong\SelectStar\valid\images

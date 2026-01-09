@@ -1,0 +1,39 @@
+1. 데이터 파일 다운로드
+
+- 링크 : https://open.selectstar.ai/ko/fitogether
+- 파일 : fittogether.zip
+- 내용 구성 : *.json 파일 11150개 (video_01_000036.json ~ video_36_000202.json), *.jpg 파일 11150개 (video_01_000036.jpg ~ video_36_000202.jpg)
+
+- 데이터 용량 : 약 3.4 GB
+
+
+2. VScode의 cmd 창에서 아래 명령어 실행
+
+- pip install ultralytics pyyaml pandas matplotlib seaborn opencv-python 실행
+
+
+3. 데이터 넣기
+
+- 왼쪽 파일창에 생성된 Data 폴더 안에 압축을 푼 fittogether 폴더를 넣는다.
+- Data/fittogether 폴더 안에 *.json, *.jpg 파일들이 각각 11150개가 있는 것을 확인한다.
+
+
+4. 실행전 아래 사항 확인
+
+# 본인의 Local PC의 GPU 실행 환경 확인하여 cuda가 될 수 있도록, 셋팅할 것.
+
+# 프로젝트 회상위 경로 (root폴더 경로) 설정
+- ROOT_DIR = "C:\\yssong\\ObjectDetection_SelectStar_Football"
+
+# # 원본 JPG/JSON 데이터 경로 확인
+- DATA_DIR = ROOT_DIR + "\\Data\\fittogether\\"  
+
+# 데이터 샘플링 비율 (0.1 = 전체의 10%만 사용하여 빠른 실험 진행)
+
+DATA_RATIO = 0.1  # 우선 테스트용 10% 사용만 사용하여 빠른 실험 진행
+#DATA_RATIO = 1.0  # 전체 데이터 사용 <= 충분한 연산이 확인될 시.
+
+# 학습 횟수 고정 (테스트용 3~5회, 실제 학습 시 30회 이상 권장, 50회면 충분)
+
+#FIXED_EPOCHS = 5 # 테스트용
+FIXED_EPOCHS = 50 # 실제 학습 시

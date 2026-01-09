@@ -1,0 +1,4 @@
+Model,Size,Run,mAP50,Epochs
+yolov8n,640,Step1_yolov8n_SZ640_E50,0.46343,50
+yolov8s,640,Step1_yolov8s_SZ640_E50,0.51525,50
+yolov8s,1280,Step2_Winner_yolov8s_SZ1280_E50,0.62285,50
