@@ -39,7 +39,8 @@ YOLOv8 기반 축구 경기 영상 내 객체 탐지 성능 최적화 분석 실
 
 ### 정량적 성능 분석
 
-[Performance Analysis]
+🔎[Performance Analysis]
+
 <img width="1400" height="800" alt="Step_Comparison_E50" src="https://github.com/user-attachments/assets/47b2741c-01c2-441e-a833-34c8ac55fe32" />
 
 
@@ -55,9 +56,11 @@ YOLOv8 기반 축구 경기 영상 내 객체 탐지 성능 최적화 분석 실
 3. **수렴 속도**:
    - 고해상도 모델은 **10 Epoch 이내**에 목표 성능(0.5) 달성
 
+
 ### 정성적 탐지 결과
 
-[Detection Results Comparison]
+🔎[Detection Results Comparison]
+
 <img width="768" height="979" alt="Resolution_Comparison_Result" src="https://github.com/user-attachments/assets/5ee30734-b3f0-4f34-acbd-57a64d7469c4" />
 
 
