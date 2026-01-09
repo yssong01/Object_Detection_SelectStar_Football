@@ -112,7 +112,7 @@ soccer-object-detection/
 └── README.md
 ```
 
-## 8. 참고 문헌 및 데이터 출처
+## 8. 참고 문헌
 
 - [Ultralytics YOLOv8 Documentation](https://docs.ultralytics.com/)
 - [SelectStar Fitogether Dataset](https://selectstar.ai/)
