@@ -25,10 +25,10 @@ YOLOv8 기반 축구 경기 영상 내 객체 탐지 성능 최적화 분석 실
   - `O` (Others): 기타 객체
 
 ### Local PC의 GPU 활용
-- >> 장치 확인: cuda
->> GPU 모델: NVIDIA GeForce RTX 4070 Laptop GPU
+- VScode에서 Google Colab 실행 -> local PC의 장치 확인: cuda 활용
+ -> GPU 모델: NVIDIA GeForce RTX 4070 Laptop GPU
 
-### Models & Configurations
+### Models & Configurations (Epochs = 50)
 | Model | Resolution | Batch Size | Early Stopping |
 |-------|-----------|------------|----------------|
 | YOLOv8n | 640px | AutoBatch (-1) | patience=5 |
