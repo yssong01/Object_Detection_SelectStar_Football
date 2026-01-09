@@ -46,7 +46,7 @@ YOLOv8 기반 축구 경기 영상 내 객체 탐지 성능 최적화 분석 실
 <img width="1400" height="800" alt="Step_Comparison_E50" src="https://github.com/user-attachments/assets/47b2741c-01c2-441e-a833-34c8ac55fe32" />
 
 
-**✅ 주요 발견사항**:
+**✅ 주요 결과**:
 
 1. **해상도의 결정적 영향**: 
    - `yolov8s_SZ1280` 모델이 mAP50 ~ 0.6 > 0.5 달성
