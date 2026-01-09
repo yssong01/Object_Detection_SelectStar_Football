@@ -1,4 +1,4 @@
-# ⚽ Object Detection - Football (using YOLO8v model)
+# ⚽ Object Detection - Football
 
 YOLOv8 기반 축구 경기 영상 내 객체 탐지 성능 최적화 분석 실험
 
